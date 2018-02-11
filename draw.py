@@ -65,6 +65,13 @@ def draw_line( x0, y0, x1, y1, screen, color):
     if (x0 == x1):
         draw_line7(x0,y0,x1,y1,screen,color)
         return
+    if (x1 < x0):
+        a = x1
+        x1 = x0
+        x0 = a
+        a = y1
+        y1 = y0
+        y0 = a
     m = ((y1-y0)*1.0)/(x1-x0)
     if (m >= 0):
         if (m <= 1):
